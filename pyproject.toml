@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "factorlab"
+version = "0.1.0"
+description = "Equity factor research in kdb+/q with a Python layer: Fama-MacBeth, Newey-West, quintile sorts"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pandas>=2.0", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+kdb = ["pykx>=3.0"]
+data = ["yfinance>=0.2"]
+dev = ["pytest>=8", "statsmodels>=0.14"]
+
+[tool.setuptools]
+packages = ["factorlab"]
